@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="UWL RAK Student Council Election: learn how to vote, review candidates, and cast your ballot securely." />
+  <title>Online Voting Portal · UWL RAK Student Council</title>
+  <link rel="stylesheet" href="home.css" />
+  <script src="home.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="identity" href="https://uwl.ac.ae/" target="_blank" rel="noopener noreferrer" aria-label="University of West London Ras Al Khaimah Campus website">
+      <img src="uwl-rak-logo.webp" alt="University of West London RAK Branch Campus logo" />
+      <span class="identity-fallback">UNIVERSITY OF WEST LONDON <small>RAK Branch Campus</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="nav-current" href="/" aria-current="page">Home</a>
+      <a href="#election">Election</a>
+      <a href="#candidates">Candidates</a>
+      <a href="/results.html">Results</a>
+      <!-- <a href="/admin.html">Admin</a> -->
+      <a class="nav-vote" href="/vote.html">Vote now <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="eyebrow light"><span class="eyebrow-line"></span> UNIVERSITY OF WEST LONDON · RAK CAMPUS</div>
+        <h1 id="hero-title">Welcome to the<br /><em>Online Voting Portal</em></h1>
+        <p>Your participation matters! The Student Council Election provides every eligible student with an opportunity to elect their representatives and contribute to the university community.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="/vote.html">Start voting <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#before-you-vote">Before you vote <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-caption">Secure voting <span aria-hidden="true">·</span> One ballot per eligible voter</div>
+      </div>
+      <div class="hero-photo"><img src="/campus-photo.webp" alt="University of West London Ras Al Khaimah campus building" /></div>
+    </section>
+
+    <section class="election-section section-shell" id="election" aria-labelledby="election-title">
+      <div class="section-heading"><div><div class="eyebrow">THE ELECTION</div><h2 id="election-title">Everything you need to know</h2></div><p>A quick guide before you vote.</p></div>
+      <div class="election-grid">
+        <div class="info-card featured"><div class="card-icon">01</div><div class="card-label">CURRENT ELECTION</div><h3 id="election-name">Loading election…</h3><p id="election-description">Election details will appear here.</p><div class="status-row"><span class="status-pill" id="election-status">Checking status…</span><span id="election-close">Checking schedule…</span></div></div>
+        <div class="info-card"><div class="card-icon">02</div><div class="card-label">WHO CAN VOTE</div><h3>Registered students</h3><p>Use the email address registered for this election. A one-time code confirms your eligibility before the ballot opens.</p></div>
+        <div class="info-card"><div class="card-icon">03</div><div class="card-label">YOUR BALLOT</div><h3>Your choice</h3><p>Review the candidates and choose the positions you want to vote in. You may skip other positions.</p></div>
+      </div>
+    </section>
+
+    <section class="before-section section-shell" id="before-you-vote" aria-labelledby="before-title">
+      <div class="before-photo"><img src="/students_photo.jpeg" alt="A group of university students together on campus" loading="lazy" /></div>
+      <div class="before-copy"><div class="eyebrow">PREPARE TO PARTICIPATE</div><h2 id="before-title">Before you vote</h2><ul class="check-list"><li>Review the list of candidates.</li><li>Understand the voting procedure.</li><li>Keep your university email accessible for OTP verification.</li><li>Ensure that you have your student ID ready.</li></ul></div>
+    </section>
+
+    <section class="positions-section section-shell" aria-labelledby="positions-title">
+      <div class="section-heading"><div><div class="eyebrow">ROLES ON THE BALLOT</div><h2 id="positions-title">Positions you can vote for</h2></div><p id="positions-caption">Current positions from this election.</p></div>
+      <div class="position-list" id="position-list" aria-live="polite"><div class="empty-state">Loading positions…</div></div>
+    </section>
+
+    <section class="candidates-section" id="candidates" aria-labelledby="candidates-title">
+      <div class="section-shell candidate-layout"><div class="candidate-intro"><div class="eyebrow">MEET THE CANDIDATES</div><h2 id="candidates-title">Know who is standing.</h2><p>Review the candidates contesting in your respective level before making your choice. Candidate names and photos appear here as soon as they are added to the election.</p><a class="inline-link" href="/vote.html">View your ballot <span aria-hidden="true">↗</span></a></div><div class="candidate-list" id="candidate-list" aria-live="polite"><div class="empty-state">Loading candidates…</div></div></div>
+    </section>
+
+    <section class="steps-section section-shell" aria-labelledby="steps-title">
+      <div class="section-heading"><div><div class="eyebrow">THE VOTING PROCESS</div><h2 id="steps-title">How does online voting work?</h2></div></div>
+      <ol class="steps-grid"><li class="step"><span>01</span><h3>Student Authentication</h3><p>Enter your registered university email address to verify your eligibility.</p></li><li class="step"><span>02</span><h3>Email OTP Verification</h3><p>A One-Time Password (OTP) will be sent to your registered university email address.</p></li><li class="step"><span>03</span><h3>View Candidates</h3><p>Review the candidates contesting in your respective level.</p></li><li class="step"><span>04</span><h3>Cast Your Vote</h3><p>Select your preferred candidates for the positions you choose, then confirm before submission.</p></li><li class="step"><span>05</span><h3>Vote Confirmation</h3><p>Once submitted, your vote will be securely recorded. You cannot vote again.</p></li></ol>
+    </section>
+
+    <section class="privacy-section section-shell" aria-labelledby="privacy-title"><div class="eyebrow">YOUR BALLOT MATTERS</div><h2 id="privacy-title">Security &amp; Transparency</h2><div class="privacy-grid"><div class="privacy-card"><h3>Secure Student Authentication</h3><p>Only eligible students can access the voting process through identity verification and OTP authentication.</p></div><div class="privacy-card"><h3>Administrator Ballot Review</h3><p>Authorized election administrators can link voter records to ballot choices. If a voter is removed for a recorded reason, their linked ballots are excluded from the tally while remaining in the audit chain.</p></div><div class="privacy-card"><h3>Verifiable Voting Records</h3><p>After the election closes, ballot records can be independently verified as part of the election transparency process.</p><a href="/verify">See ballot verification <span aria-hidden="true">↗</span></a></div></div></section>
+
+    <section class="guidelines-section section-shell" aria-labelledby="guidelines-title"><div><div class="eyebrow">VOTE RESPONSIBLY</div><h2 id="guidelines-title">Important Voting Guidelines</h2></div><ul class="check-list"><li>Each eligible student is entitled to one vote.</li><li>Do not share your OTP with anyone.</li><li>Review your selection before submitting.</li><li>Votes cannot be modified after final submission.</li><li>Maintain the confidentiality of your voting credentials.</li></ul></section>
+
+    <section class="trust-section section-shell" aria-labelledby="ready-title"><div class="trust-copy"><div class="eyebrow light">VOTING PORTAL</div><h2 id="ready-title">Ready to Make Your Voice Heard?</h2><p>Participate responsibly. Every eligible vote matters.</p><a class="button button-light" href="/vote.html">START VOTING <span aria-hidden="true">↗</span></a></div><div class="trust-result"><div class="result-icon" aria-hidden="true">↗</div><div class="card-label">ELECTION RESULTS</div><h3>See the final outcome</h3><p id="results-note">The results will be published once the voting process has officially closed.</p><a href="/results.html">View results <span aria-hidden="true">→</span></a></div></section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>UWL RAK · Student Council Election</strong>
+      <span>Ras Al Khaimah Campus</span>
+    </div><div class="footer-links">
+      <a href="/vote.html">Vote</a><a href="/results.html">Results</a>
+      <!-- <a href="/admin.html">Admin</a><a href="https://uwl.ac.ae/" target="_blank" rel="noopener noreferrer">UWL RAK website ↗</a> -->
+  </div></footer>
+</body>
+</html>

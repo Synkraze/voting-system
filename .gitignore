@@ -1,0 +1,9 @@
+node_modules/
+.env
+keys/
+*.db
+*.db-shm
+*.db-wal
+uploads/
+election-backup-*.json
+restored-election/

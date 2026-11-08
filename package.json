@@ -1,0 +1,19 @@
+{
+  "name": "voting",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node --env-file=.env src/server.js",
+    "keygen": "node --env-file=.env src/crypto.js keygen",
+    "test": "node --env-file=.env --test",
+    "create-admin": "node --env-file=.env src/auth.js create-admin"
+  },
+  "dependencies": {
+    "chart.js": "^4.6.1",
+    "express": "^4.19.0",
+    "nodemailer": "^6.10.1",
+    "pg": "^8.23.1",
+    "sharp": "^0.35.5"
+  }
+}

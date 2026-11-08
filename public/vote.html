@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Voting · Student Council Election 2026</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main navigation">
+  <span class="brand"><span class="logo"><img src="/uwl-rak-logo.webp" alt="University of West London RAK Branch Campus logo" /></span> <span data-title>Student Council Election 2026</span></span>
+  <span class="spacer"></span>
+  <a class="tab" href="/">Home</a>
+  <a class="tab active" aria-current="page" href="/vote.html">Vote</a>
+  <a class="tab" href="/results.html">Results</a>
+  <span id="countdown" class="badge" style="display:none"></span>
+  <span id="clock" class="nav-clock"></span>
+</nav>
+
+<div class="wrap" id="main"><header class="page-heading"><div class="eyebrow"></div><h1>Cast your vote</h1><p>Sign in using your registered email address, enter the verification code sent to your inbox, and proceed to cast your vote by selecting your preferred candidates.</p></header>
+
+  <!-- Step 0: consent -->
+  <div class="card" id="consentCard">
+    <h2>Student Declaration &amp; Consent</h2>
+    <div class="sub">Before proceeding with the online voting process, please read and acknowledge the following. All boxes are required.</div>
+    <div id="consentList"></div>
+    <button id="consentBtn" disabled onclick="acceptConsent()">I agree — continue to sign in</button>
+    <div id="consentMsg" class="msg" role="status"></div>
+  </div>
+
+  <!-- Step 1: email -->
+  <div class="card" id="emailCard" style="display:none">
+    <h2><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="/icons.svg#mail"></use></svg> Sign in to vote</h2>
+    <div class="sub">Enter the email address on your voter registration. We'll send you a one-time code.</div>
+    <div data-desc class="sub" style="display:none;border-left:3px solid var(--brand);padding-left:.7rem"></div>
+    <label for="email">Email address</label>
+    <div class="row">
+      <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="you@college.edu" style="flex:1" />
+      <button id="otpReqBtn" onclick="requestOtp()">Send code</button>
+    </div>
+    <div id="emailMsg" class="msg" role="status"></div>
+  </div>
+
+  <!-- Step 2: OTP -->
+  <div class="card" id="otpCard" style="display:none">
+    <h2>Enter your code</h2>
+    <div class="sub">We sent a 6-digit code to <strong id="otpEmailLabel"></strong>. Each verification code can be used only once. Do not share your verification code with anyone. It expires in a few minutes and works once.</div>
+    <label for="otp">One-time code</label>
+    <div class="row">
+      <input id="otp" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="123456" style="flex:1" />
+      <button id="otpBtn" onclick="verifyOtp()">Verify &amp; open ballot</button>
+    </div>
+    <div class="row" style="margin-top:.4rem"><button class="ghost" onclick="requestOtp()">Resend code</button><button class="ghost" onclick="backToEmail()">Use a different email</button></div>
+    <div id="otpMsg" class="msg" role="status"></div>
+  </div>
+
+  <!-- Step 3: ballot -->
+  <div class="card" id="ballotCard" style="display:none">
+    <h2><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="/icons.svg#ballot"></use></svg> Your private ballot</h2>
+    <div class="sub">Choose candidates for the positions you want to vote in. Any position left unselected will be recorded as “Not interested”. Select at least one candidate to cast your ballot. You can cast your ballot only once.</div>
+    <div id="ballotList"></div>
+    <div class="row ballot-actions" style="align-items:center">
+      <span class="sub" id="ballotProgress"></span>
+      <span class="spacer"></span>
+      <button id="castBtn" disabled onclick="vote()">Cast ballot</button>
+    </div>
+    <div id="ballotMsg" class="msg" role="status"></div>
+  </div>
+
+  <!-- Confirmation -->
+  <div class="card center" id="doneCard" style="display:none">
+    <div class="ic"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="/icons.svg#success"></use></svg></div>
+    <h2>Vote recorded</h2>
+    <div class="sub">Thank you. Your ballot has been recorded. You can close this page.</div>
+    <button class="ghost" onclick="restart()">Done</button>
+  </div>
+</div>
+
+<footer class="site-foot">
+  <div><strong>UWL RAK · Student Council Election 2026</strong><span>Ras Al Khaimah Campus</span></div>
+  <div class="foot-links"><a href="/">Home</a><a href="/vote.html">Vote</a><a href="/results.html">Results</a><a href="/verify">Verify ballots</a></div>
+</footer>
+
+<script src="/ui.js"></script>
+<script src="/vote.js" defer></script>
+<script src="/app.js"></script>
+</body>
+</html>
